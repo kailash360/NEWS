@@ -33,7 +33,7 @@ news_content_list.forEach((news_content) => {
 
                 //Append a div
                 let news_card_body = document.createElement("div")
-                news_card_body.classList.add("trending-news-card")
+                news_card_body.classList.add("news-card")
                 news_card.appendChild(news_card_body)
 
                 //Add image section and then add image in it
