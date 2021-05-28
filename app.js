@@ -189,6 +189,4 @@ app.get("/categories", (req, res) => {
     res.end(categories)
 })
 
-app.listen(port,
-    console.log("Server started succesfully at " + port)
-)
+app.listen(process.env.PORT || port)
