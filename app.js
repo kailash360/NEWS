@@ -25,70 +25,70 @@ let country = fs.readFileSync("./views/country.html")
 let world = fs.readFileSync("./views/world.html")
 let categories = fs.readFileSync("./views/categories.html")
 
-//Getting data for science category page,and saving in a json file
-newsapi.v2.topHeadlines({
-    language: 'en',
-    category: 'science'
-}).then(response => {
-    // console.log((response['articles']))
-    try {
-        fs.writeFileSync('./data/category-science-data.json', JSON.stringify(response['articles']))
-    } catch (err) {
-        console.log(err)
-    }
-});
+// //Getting data for science category page,and saving in a json file
+// newsapi.v2.topHeadlines({
+//     language: 'en',
+//     category: 'science'
+// }).then(response => {
+//     // console.log((response['articles']))
+//     try {
+//         fs.writeFileSync('./data/category-science-data.json', JSON.stringify(response['articles']))
+//     } catch (err) {
+//         console.log(err)
+//     }
+// });
 
-//Getting data for technology page,and saving in a json file
-newsapi.v2.topHeadlines({
-    language: 'en',
-    category: 'technology'
-}).then(response => {
-    // console.log((response['articles']))
-    try {
-        fs.writeFileSync('./data/category-technology-data.json', JSON.stringify(response['articles']))
-    } catch (err) {
-        console.log(err)
-    }
-});
+// //Getting data for technology page,and saving in a json file
+// newsapi.v2.topHeadlines({
+//     language: 'en',
+//     category: 'technology'
+// }).then(response => {
+//     // console.log((response['articles']))
+//     try {
+//         fs.writeFileSync('./data/category-technology-data.json', JSON.stringify(response['articles']))
+//     } catch (err) {
+//         console.log(err)
+//     }
+// });
 
-//Getting data for business page,and saving in a json file
-newsapi.v2.topHeadlines({
-    language: 'en',
-    category: 'business'
-}).then(response => {
-    // console.log((response['articles']))
-    try {
-        fs.writeFileSync('./data/ategory-business-data.json', JSON.stringify(response['articles']))
-    } catch (err) {
-        console.log(err)
-    }
-});
+// //Getting data for business page,and saving in a json file
+// newsapi.v2.topHeadlines({
+//     language: 'en',
+//     category: 'business'
+// }).then(response => {
+//     // console.log((response['articles']))
+//     try {
+//         fs.writeFileSync('./data/ategory-business-data.json', JSON.stringify(response['articles']))
+//     } catch (err) {
+//         console.log(err)
+//     }
+// });
 
-//Getting data for sports page,and saving in a json file
-newsapi.v2.topHeadlines({
-    language: 'en',
-    category: 'sports'
-}).then(response => {
-    // console.log((response['articles']))
-    try {
-        fs.writeFileSync('./data/category-sports-data.json', JSON.stringify(response['articles']))
-    } catch (err) {
-        console.log(err)
-    }
-});
+// //Getting data for sports page,and saving in a json file
+// newsapi.v2.topHeadlines({
+//     language: 'en',
+//     category: 'sports'
+// }).then(response => {
+//     // console.log((response['articles']))
+//     try {
+//         fs.writeFileSync('./data/category-sports-data.json', JSON.stringify(response['articles']))
+//     } catch (err) {
+//         console.log(err)
+//     }
+// });
 
-//Getting data for entertainment page,and saving in a json file
-newsapi.v2.topHeadlines({
-    language: 'en',
-    category: 'entertainment'
-}).then(response => {
-    // console.log((response['articles']))
-    try {
-        fs.writeFileSync('./data/category-entertainment-data.json', JSON.stringify(response['articles']))
-    } catch (err) {
-        console.log(err)
-    }
-});
+// //Getting data for entertainment page,and saving in a json file
+// newsapi.v2.topHeadlines({
+//     language: 'en',
+//     category: 'entertainment'
+// }).then(response => {
+//     // console.log((response['articles']))
+//     try {
+//         fs.writeFileSync('./data/category-entertainment-data.json', JSON.stringify(response['articles']))
+//     } catch (err) {
+//         console.log(err)
+//     }
+// });
 
 
 //ROUTING FROM HERE
