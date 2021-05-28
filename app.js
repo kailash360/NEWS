@@ -5,8 +5,8 @@ const bodyparser = require("body-parser")
 const app = express()
 const port = 80
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('4dbc17e007ab436fb66416009dfb59a8');
-// const newsapi = new NewsAPI('903567c1348c4f4ca942ee37ebc52547'); <--my key
+// const newsapi = new NewsAPI('4dbc17e007ab436fb66416009dfb59a8');
+const newsapi = new NewsAPI('903567c1348c4f4ca942ee37ebc52547'); //<--my key
 
 //Setting source of static,javascripts,and data-files
 app.use('/static', express.static('static'))
@@ -23,20 +23,7 @@ let home = fs.readFileSync("./views/home.html")
 let trending = fs.readFileSync("./views/trending.html")
 let country = fs.readFileSync("./views/country.html")
 let world = fs.readFileSync("./views/world.html")
-let categories = fs.readFileSync("./views/categories.html")
-
-// //Getting data for science category page,and saving in a json file
-// newsapi.v2.topHeadlines({
-//     language: 'en',
-//     category: 'science'
-// }).then(response => {
-//     // console.log((response['articles']))
-//     try {
-//         fs.writeFileSync('./data/category-science-data.json', JSON.stringify(response['articles']))
-//     } catch (err) {
-//         console.log(err)
-//     }
-// });
+let category_science = fs.readFileSync("./views/categories/science.html")
 
 // //Getting data for technology page,and saving in a json file
 // newsapi.v2.topHeadlines({
@@ -92,6 +79,7 @@ let categories = fs.readFileSync("./views/categories.html")
 
 
 //ROUTING FROM HERE
+//Homepage
 app.get("/", (req, res) => {
     //Getting data for covid section of homepage,and saving in a json file
     newsapi.v2.topHeadlines({
@@ -123,6 +111,7 @@ app.get("/", (req, res) => {
     res.end(home)
 })
 
+//Trending
 app.get("/trending", (req, res) => {
     //Getting data for trending page,and saving in a json file
     newsapi.v2.topHeadlines({
@@ -140,6 +129,7 @@ app.get("/trending", (req, res) => {
     res.end(trending)
 })
 
+//India(country)
 app.get("/country", (req, res) => {
     //Getting data for country page,and saving in a json file
     newsapi.v2.everything({
@@ -157,6 +147,7 @@ app.get("/country", (req, res) => {
     res.end(country)
 })
 
+//World
 app.get("/world", (req, res) => {
     //Getting top data for world page,and saving in a json file
     newsapi.v2.topHeadlines({
@@ -183,6 +174,25 @@ app.get("/world", (req, res) => {
     });
     //Route to world page
     res.end(world)
+})
+
+//Science category
+app.get("/categories/science", (req, res) => {
+
+    //Getting data for science page,and saving in a json file
+    newsapi.v2.topHeadlines({
+        language: 'en',
+        category: 'science',
+        pageSize: 25
+    }).then(response => {
+        // console.log((response['articles']))
+        try {
+            fs.writeFileSync('./data/category-science-data.json', JSON.stringify(response['articles']))
+        } catch (err) {
+            console.log(err)
+        }
+    });
+    res.end(category_science)
 })
 
 app.get("/categories", (req, res) => {
