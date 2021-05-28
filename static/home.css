@@ -140,3 +140,24 @@ body {
 .footer p a:hover {
     color: rgb(255, 253, 253);
 }
+
+@media screen and (max-width:450px) {
+    .news-card {
+        padding: 0.3rem 0px 0.5rem 0.2rem;
+        height: 130px;
+    }
+    .image-section {
+        width: 5rem;
+        height: 5rem;
+    }
+    .image-section img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .news-card-subject {
+        font-size: 110%;
+    }
+    .news-card-summary {
+        display: none;
+    }
+}
