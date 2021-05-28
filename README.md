@@ -7,6 +7,7 @@ A well-structured NEWS Website that brings you all the happenings around the wor
 
 ### Elements Used
 - NodeJS
+- Express
 - REST API
 - HTML
 - CSS
