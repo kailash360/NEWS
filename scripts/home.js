@@ -1,7 +1,7 @@
 console.log("JS integrated successfully!!")
 
 //Get all the sections in the page where news will be displayed
-let news_content_list = document.querySelectorAll('.news-content')
+let news_content_list = document.querySelectorAll('.homepage-news-content')
 
 // Here,add the name of the data-file of a section, in the list in the order it is present in page
 let data_list = ['covid-data', 'latest-data']

@@ -26,9 +26,9 @@ body {
 }
 
 
-/* For covid-19-heading (applicable only to homepage) */
+/* For covid-heading  */
 
-#covid-news-container {
+.covid-news-container {
     height: 415px;
     width: 100vw;
     /* border: 2px solid black; */
@@ -38,36 +38,6 @@ body {
     align-items: center;
 }
 
-
-/* For latest-news-heading (applicable only to homepage) */
-
-#latest-news-container {
-    height: 420px;
-    width: 100vw;
-    /* border: 2px solid black; */
-    margin-top: 1px;
-    padding-right: 10px;
-    text-align: center;
-    align-items: center;
-    overflow-y: hidden;
-}
-
-
-/* For the entire news container(containing a section-heading,and news-cards)  */
-
-.news-container {
-    height: 715px;
-    width: 100vw;
-    /* border: 2px solid black; */
-    margin-top: 1px;
-    padding-right: 10px;
-    text-align: center;
-    align-items: center;
-}
-
-
-/* For heading of the section  */
-
 .heading {
     font-size: 230%;
     font-weight: 500;
@@ -76,24 +46,7 @@ body {
     margin: 12px 0px;
 }
 
-
-/* For the section containing news card list  */
-
 .news-content {
-    margin-top: 5px;
-    /* border: 2px solid red; */
-    height: 635px;
-    width: inherit;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-}
-
-
-/* For the section containing news card list (applicable to homepage only)  */
-
-.homepage-news-content {
     margin-top: 5px;
     /* border: 2px solid red; */
     height: 350px;
@@ -102,10 +55,9 @@ body {
     overflow-x: hidden;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
-
-
-/* For individual news card  */
 
 .news-card {
     display: flex;
@@ -127,14 +79,12 @@ body {
     transform: scale(1.01);
 }
 
-
-/* For images of news card  */
-
 .image-section {
     margin-left: 5px;
     margin-top: 3px;
     width: 10rem;
     height: 10rem;
+    /* border: 2px solid green; */
 }
 
 .image-section img {
@@ -145,13 +95,12 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-/* For text inside each news card  */
-
 .text-section {
     height: 12vw;
     width: 70vw;
+    /* border: 2px solid green; */
     margin-left: 12px;
+    /* margin-top: 5px; */
     padding-right: 2px;
     color: black;
 }
@@ -165,8 +114,15 @@ body {
     font-style: italic;
 }
 
-
-/* Footer of the page  */
+.latest-news-container {
+    height: 420px;
+    width: 100vw;
+    /* border: 2px solid black; */
+    margin-top: 1px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+}
 
 .footer {
     width: 100vw;
@@ -186,9 +142,6 @@ body {
 .footer p a:hover {
     color: rgb(255, 253, 253);
 }
-
-
-/* Responsive design using media query   */
 
 @media screen and (max-width:550px) {
     .heading {
