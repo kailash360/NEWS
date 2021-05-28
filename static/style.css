@@ -26,9 +26,37 @@ body {
 }
 
 
-/* For covid-heading  */
+/* For covid-heading (applicable only to homepage) */
 
-.world-news-container {
+#covid-news-container {
+    height: 415px;
+    width: 100vw;
+    /* border: 2px solid black; */
+    margin-top: 1px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+
+/* For latest-news-heading (applicable only to homepage) */
+
+#latest-news-container {
+    height: 420px;
+    width: 100vw;
+    /* border: 2px solid black; */
+    margin-top: 1px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+
+/* For the entire news container  */
+
+.news-container {
     height: 715px;
     width: 100vw;
     /* border: 2px solid black; */
@@ -38,6 +66,9 @@ body {
     align-items: center;
 }
 
+
+/* For heading of the section  */
+
 .heading {
     font-size: 230%;
     font-weight: 500;
@@ -45,6 +76,9 @@ body {
     color: white;
     margin: 12px 0px;
 }
+
+
+/* For the section containing news card list  */
 
 .news-content {
     margin-top: 5px;
@@ -57,6 +91,9 @@ body {
     border-bottom: 1px solid grey;
 }
 
+
+/* For individual news card  */
+
 .news-card {
     display: flex;
     flex-direction: row;
@@ -68,19 +105,23 @@ body {
     text-align: left;
     overflow-y: hidden;
     overflow-x: hidden;
+    transition: all 0.4s;
 }
 
 .news-card:hover {
     background-color: rgb(180, 1, 1);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.8);
+    transform: scale(1.01);
 }
+
+
+/* For images of news card  */
 
 .image-section {
     margin-left: 5px;
     margin-top: 3px;
     width: 10rem;
     height: 10rem;
-    /* border: 2px solid green; */
 }
 
 .image-section img {
@@ -91,12 +132,13 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+
+/* For text inside each news card  */
+
 .text-section {
     height: 12vw;
     width: 70vw;
-    /* border: 2px solid green; */
     margin-left: 12px;
-    /* margin-top: 5px; */
     padding-right: 2px;
     color: black;
 }
@@ -109,6 +151,9 @@ body {
     font-size: 90%;
     font-style: italic;
 }
+
+
+/* Footer of the page  */
 
 .footer {
     width: 100vw;
@@ -129,23 +174,34 @@ body {
     color: rgb(255, 253, 253);
 }
 
-@media screen and (max-width:450px) {
+
+/* Responsive design using media query   */
+
+@media screen and (max-width:550px) {
+    .heading {
+        width: 100vw;
+        font-size: 170%;
+    }
     .news-card {
         padding: 0.3rem 0px 0.5rem 0.2rem;
         height: 130px;
     }
     .image-section {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
     }
     .image-section img {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
     }
     .news-card-subject {
         font-size: 110%;
     }
     .news-card-summary {
         display: none;
+    }
+    .footer {
+        font-size: 0.8em;
+        height: 30px;
     }
 }
