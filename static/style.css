@@ -184,7 +184,6 @@ body {
 .footer div {
     display: flex;
     flex-direction: row;
-    background-color: rgb(61, 0, 0);
     justify-content: center;
 }
 
@@ -235,6 +234,7 @@ body {
     .footer div {
         flex-wrap: wrap;
         font-size: 120%;
+        background-color: rgb(61, 0, 0);
     }
     .footer div p {
         margin-bottom: 0.2rem;

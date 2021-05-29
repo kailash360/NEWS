@@ -27,19 +27,9 @@ let trending = fs.readFileSync("./views/trending.html")
 let country = fs.readFileSync("./views/country.html")
 let world = fs.readFileSync("./views/world.html")
 let category_science = fs.readFileSync("./views/categories/science.html")
+let category_technology = fs.readFileSync("./views/categories/technology.html")
 
-// //Getting data for technology page,and saving in a json file
-// newsapi.v2.topHeadlines({
-//     language: 'en',
-//     category: 'technology'
-// }).then(response => {
-//     // console.log((response['articles']))
-//     try {
-//         fs.writeFileSync('./data/category-technology-data.json', JSON.stringify(response['articles']))
-//     } catch (err) {
-//         console.log(err)
-//     }
-// });
+
 
 // //Getting data for business page,and saving in a json file
 // newsapi.v2.topHeadlines({
@@ -198,6 +188,25 @@ app.get("/categories/science", (req, res) => {
         }
     });
     res.end(category_science)
+})
+
+//Technology category
+app.get("/categories/technology", (req, res) => {
+
+    //Getting data for technology page,and saving in a json file
+    newsapi.v2.topHeadlines({
+        language: 'en',
+        category: 'technology',
+        pageSize: 25
+    }).then(response => {
+        // console.log((response['articles']))
+        try {
+            fs.writeFileSync('./data/category-technology-data.json', JSON.stringify(response['articles']))
+        } catch (err) {
+            console.log(err)
+        }
+    });
+    res.end(category_technology)
 })
 
 app.get("/categories", (req, res) => {
