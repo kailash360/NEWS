@@ -5,8 +5,11 @@ const bodyparser = require("body-parser")
 const app = express()
 const port = 80
 const NewsAPI = require('newsapi');
-// const newsapi = new NewsAPI('4dbc17e007ab436fb66416009dfb59a8');
-const newsapi = new NewsAPI('903567c1348c4f4ca942ee37ebc52547'); //<--my key
+const key_list = ['4dbc17e007ab436fb66416009dfb59a8', '903567c1348c4f4ca942ee37ebc52547']
+let ind = Math.floor(Math.random() * 2)
+let key = key_list[ind]
+console.log(key)
+const newsapi = new NewsAPI(key);
 
 //Setting source of static,javascripts,and data-files
 app.use('/static', express.static('static'))
@@ -86,6 +89,7 @@ app.get("/", (req, res) => {
         q: 'covid',
         country: 'in',
         language: 'en',
+        pageSize: 20,
     }).then(response => {
         // console.log((response['articles']))
         try {
@@ -133,8 +137,9 @@ app.get("/trending", (req, res) => {
 app.get("/country", (req, res) => {
     //Getting data for country page,and saving in a json file
     newsapi.v2.everything({
-        q: 'india',
+        q: 'India',
         language: 'en',
+        sortBy: 'publishedAt'
     }).then(response => {
         // console.log((response['articles']))
         try {
