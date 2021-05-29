@@ -19,7 +19,7 @@ This is a basic NEWS website collectingg all the events of the world, and presen
 - HTML
 - CSS
 - JavaScript
-- A pinchof Bootstrap
+- A pinch of Bootstrap
 
 | Additional Info |   |
 |--------|-------|
