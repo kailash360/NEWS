@@ -1,17 +1,29 @@
-# NEWS
+# 📰 NEWS Website 
+### _A simple NEWS Website_
 
-A well-structured NEWS Website that brings you all the happenings around the world,in realtime.
+This is a basic NEWS website collectingg all the events of the world, and presenting them to you at a fast hand,and that too in real time.
 
-### Host Link
+## 💡 How to use?
+- Click on the host link [NEWS Website](https://news-website-project.herokuapp.com/)
+- ✨Magic ✨
+- You can also read articles on different sections as per your interest.
+
+## 🌐 URL
 > https://news-website-project.herokuapp.com/
 
-### Elements Used
-- NodeJS
+## 🔥 Elements Used
+
+- NodeJS 
 - Express
-- REST API
+- REST API 
 - HTML
 - CSS
 - JavaScript
-- A pinch of Bootstrap
+- A pinchof Bootstrap
 
-_Drop suggestions,if any_
+| Additional Info |   |
+|--------|-------|
+| Hostng Platform | [Heroku](https://www.heroku.com/) |
+| API  | [NEWS API](https://newsapi.org/) |
+
+__Drop suggestions,if any__
