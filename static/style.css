@@ -195,7 +195,7 @@ body {
     color: rgb(255, 253, 253);
 }
 
-.fa {
+.footer div p a i {
     font-size: 120%;
     padding: 0.2rem 0.1rem 0rem 0.1rem;
 }
@@ -239,7 +239,7 @@ body {
     .footer div p {
         margin-bottom: 0.2rem;
     }
-    .fa {
+    .footer div p a i {
         font-size: 150%;
         margin: 0px 0.2rem;
         margin-bottom: 0.2rem;
