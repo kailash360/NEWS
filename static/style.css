@@ -175,20 +175,30 @@ body {
 .footer {
     width: 100vw;
     height: 50px;
-    display: flex;
-    flex-direction: row;
     background-color: rgb(61, 0, 0);
     justify-content: center;
     padding-top: 0.5%;
     font-size: 110%;
 }
 
-.footer p a {
+.footer div {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(61, 0, 0);
+    justify-content: center;
+}
+
+.footer div p a {
     color: rgb(199, 199, 199);
 }
 
-.footer p a:hover {
+.footer div p a:hover {
     color: rgb(255, 253, 253);
+}
+
+.fa {
+    font-size: 120%;
+    padding: 0.2rem 0.1rem 0rem 0.1rem;
 }
 
 
@@ -220,6 +230,18 @@ body {
     }
     .footer {
         font-size: 0.8em;
-        height: 30px;
+        height: 50px;
+    }
+    .footer div {
+        flex-wrap: wrap;
+        font-size: 120%;
+    }
+    .footer div p {
+        margin-bottom: 0.2rem;
+    }
+    .fa {
+        font-size: 150%;
+        margin: 0px 0.2rem;
+        margin-bottom: 0.2rem;
     }
 }
