@@ -127,7 +127,7 @@ app.get("/trending", (req, res) => {
 app.get("/country", (req, res) => {
     //Getting data for country page,and saving in a json file
     newsapi.v2.everything({
-        q: 'India',
+        qInTitle: 'India',
         language: 'en',
         sortBy: 'publishedAt'
     }).then(response => {
