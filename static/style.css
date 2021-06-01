@@ -32,6 +32,10 @@ body {
     padding-bottom: 0px;
 }
 
+.active {
+    background: linear-gradient(rgb(150, 0, 0), rgb(112, 0, 0), rgb(151, 2, 2));
+}
+
 
 /* For covid-19-heading (applicable only to homepage) */
 
