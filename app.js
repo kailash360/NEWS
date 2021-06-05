@@ -28,21 +28,6 @@ let world = fs.readFileSync("./views/world.html")
 let category_science = fs.readFileSync("./views/categories/science.html")
 let category_technology = fs.readFileSync("./views/categories/technology.html")
 
-
-
-//Getting data for business page,and saving in a json file
-newsapi.v2.topHeadlines({
-    language: 'en',
-    category: 'business'
-}).then(response => {
-    // console.log((response['articles']))
-    try {
-        fs.writeFileSync('./data/ategory-business-data.json', JSON.stringify(response['articles']))
-    } catch (err) {
-        console.log(err)
-    }
-});
-
 // //Getting data for sports page,and saving in a json file
 // newsapi.v2.topHeadlines({
 //     language: 'en',
