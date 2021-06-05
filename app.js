@@ -27,6 +27,7 @@ let country = fs.readFileSync("./views/country.html")
 let world = fs.readFileSync("./views/world.html")
 let category_science = fs.readFileSync("./views/categories/science.html")
 let category_technology = fs.readFileSync("./views/categories/technology.html")
+let category_business = fs.readFileSync("./views/categories/business.html")
 
 // //Getting data for sports page,and saving in a json file
 // newsapi.v2.topHeadlines({
@@ -209,7 +210,7 @@ app.get("/categories/business", (req, res) => {
             console.log(err)
         }
     });
-    res.end(category_technology)
+    res.end(category_business)
 })
 
 
