@@ -30,18 +30,18 @@ let category_technology = fs.readFileSync("./views/categories/technology.html")
 
 
 
-// //Getting data for business page,and saving in a json file
-// newsapi.v2.topHeadlines({
-//     language: 'en',
-//     category: 'business'
-// }).then(response => {
-//     // console.log((response['articles']))
-//     try {
-//         fs.writeFileSync('./data/ategory-business-data.json', JSON.stringify(response['articles']))
-//     } catch (err) {
-//         console.log(err)
-//     }
-// });
+//Getting data for business page,and saving in a json file
+newsapi.v2.topHeadlines({
+    language: 'en',
+    category: 'business'
+}).then(response => {
+    // console.log((response['articles']))
+    try {
+        fs.writeFileSync('./data/ategory-business-data.json', JSON.stringify(response['articles']))
+    } catch (err) {
+        console.log(err)
+    }
+});
 
 // //Getting data for sports page,and saving in a json file
 // newsapi.v2.topHeadlines({
@@ -207,6 +207,27 @@ app.get("/categories/technology", (req, res) => {
     });
     res.end(category_technology)
 })
+
+//Business category
+app.get("/categories/business", (req, res) => {
+
+    //Getting data for business page,and saving in a json file
+    newsapi.v2.topHeadlines({
+        language: 'en',
+        category: 'business',
+        pageSize: 25
+    }).then(response => {
+        // console.log((response['articles']))
+        try {
+            fs.writeFileSync('./data/category-business-data.json', JSON.stringify(response['articles']))
+        } catch (err) {
+            console.log(err)
+        }
+    });
+    res.end(category_technology)
+})
+
+
 
 app.get("/categories", (req, res) => {
     res.end(categories)
