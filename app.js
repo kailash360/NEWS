@@ -6,7 +6,7 @@ const app = express()
 const port = 80
 const NewsAPI = require('newsapi');
 const key_list = ['4dbc17e007ab436fb66416009dfb59a8', '903567c1348c4f4ca942ee37ebc52547']
-let key = key_list[1]
+let key = key_list[0]
 console.log(key)
 const newsapi = new NewsAPI(key);
 
